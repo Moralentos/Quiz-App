@@ -1,0 +1,79 @@
+aside {
+  width: 1000px;
+}
+.list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &_right,
+  &_left {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 600px;
+
+    &__line {
+      height: 3px;
+      width: calc(100% - 35px);
+      background-color: #6a4ced;
+      transition: background-color 0.3s linear;
+    }
+
+    &__circle {
+      width: 35px;
+      height: 35px;
+      border-radius: 100%;
+      border: 12px solid #6a4ced;
+      box-sizing: border-box;
+      transition: border 0.3s linear;
+    }
+  }
+
+  &_full {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 100%;
+
+    &__line {
+      height: 3px;
+      width: calc(75% - 35px);
+      background-color: #6a4ced;
+      transition: background-color 0.3s linear;
+    }
+
+    &__circle {
+      width: 35px;
+      height: 35px;
+      border-radius: 100%;
+      border: 12px solid #6a4ced;
+      box-sizing: border-box;
+      transition: border 0.3s linear;
+    }
+  }
+}
+
+.nonActiveLineLeft {
+  height: 3px;
+  width: calc(100% - 35px);
+  background-color: rgb(185, 185, 185);
+  transition: background-color 0.3s linear;
+}
+
+.nonActiveLine {
+  height: 3px;
+  width: calc(75% - 35px);
+  background-color: rgb(185, 185, 185);
+  transition: background-color 0.3s linear;
+}
+.nonActiveCircle {
+  width: 35px;
+  height: 35px;
+  border-radius: 100%;
+  transition: border 0.3s linear;
+  box-sizing: border-box;
+  border: 12px solid rgb(185, 185, 185);
+}

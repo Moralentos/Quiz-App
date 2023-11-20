@@ -1,0 +1,123 @@
+body {
+  background-color: #f4f7fc;
+}
+
+/* Обнуление стилей (reset CSS) */
+
+/* Сброс отступов и полей для всех элементов */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* font-family: 'Nunito'; */
+}
+
+/* Сброс списков */
+ul,
+ol {
+  list-style: none;
+}
+
+/* Сброс выделения текста */
+a,
+button,
+input,
+select,
+textarea {
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+/* Сброс стандартных стилей текста */
+body,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+blockquote {
+  margin: 0;
+  padding: 0;
+}
+
+/* Сброс стандартных стилей ссылок */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Установка базового шрифта и цвета текста */
+body {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #272343;
+  background-color: #f1f3f8;
+}
+
+/* Сброс стилей изображений */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Убираем горизонтальную прокрутку */
+html,
+body {
+  overflow-x: hidden;
+}
+
+/* Добавьте дополнительные сбросы, если необходимо */
+
+/* Пример: убираем стандартное выделение для кнопок */
+button {
+  outline: none;
+}
+
+/* Пример: убираем границы у инпутов */
+input,
+select,
+textarea {
+  border: none;
+  outline: none;
+}
+
+/* Базовые стили для контейнера (для десктопных устройств) */
+.container {
+  max-width: 1200px; /* Максимальная ширина контейнера для десктопов */
+  margin: 0 auto; /* Центрирование контейнера по горизонтали */
+  /* Внутренние отступы для контента (настраиваемые) */
+  box-sizing: border-box; /* Учтем padding и border в общей ширине */
+}
+
+/* Медиа-запрос для меньших разрешений (планшеты) */
+@media (max-width: 992px) {
+  .container {
+    max-width: 768px; /* Уменьшение максимальной ширины для планшетов */
+  }
+}
+
+/* Медиа-запрос для еще меньших разрешений (мобильные устройства) */
+@media (max-width: 768px) {
+  .container {
+    max-width: 576px; /* Уменьшение максимальной ширины для мобильных устройств */
+    /* Уменьшение внутренних отступов для мобильных устройств */
+  }
+}
+
+/* Медиа-запрос для самых маленьких разрешений (узкие экраны) */
+@media (max-width: 576px) {
+  .container {
+    max-width: 376px; /* Уменьшение внутренних отступов для узких экранов */
+  }
+}
