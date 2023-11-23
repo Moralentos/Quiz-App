@@ -16,9 +16,11 @@ const ListPage: React.FC<listPageProps> = ({ elemList, pos }) => {
         if (index === 0) {
           return (
             <div className={styles.list_right} key={index}>
-              <div
-                className={index <= pos ? styles.list_right__circle : styles.nonActiveLine}
-              ></div>
+              <div className={styles.circle_block}>
+                <div
+                  className={index <= pos ? styles.list_right__circle : styles.nonActiveLine}
+                ></div>
+              </div>
               <div
                 className={index <= pos ? styles.list_right__line : styles.nonActiveCircle}
               ></div>
@@ -29,9 +31,11 @@ const ListPage: React.FC<listPageProps> = ({ elemList, pos }) => {
           return (
             <div className={styles.list_full} key={index}>
               <div className={index <= pos ? styles.list_full__line : styles.nonActiveLine}></div>
-              <div
-                className={index <= pos ? styles.list_full__circle : styles.nonActiveCircle}
-              ></div>
+              <div className={styles.circle_block}>
+                <div
+                  className={index <= pos ? styles.list_full__circle : styles.nonActiveCircle}
+                ></div>
+              </div>
               <div className={index <= pos ? styles.list_full__line : styles.nonActiveLine}></div>
             </div>
           );
@@ -41,11 +45,13 @@ const ListPage: React.FC<listPageProps> = ({ elemList, pos }) => {
           return (
             <div className={styles.list_left} key={index}>
               <div
-                className={index <= pos ? styles.list_right__line : styles.nonActiveLineLeft}
+                className={index <= pos ? styles.list_left__line : styles.nonActiveLineLeft}
               ></div>
-              <div
-                className={index <= pos ? styles.list_right__circle : styles.nonActiveCircle}
-              ></div>
+              <div className={styles.circle_block}>
+                <div
+                  className={index <= pos ? styles.list_left__circle : styles.nonActiveCircle}
+                ></div>
+              </div>
             </div>
           );
         }
