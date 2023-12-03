@@ -1,8 +1,7 @@
-import React, { ReactNode } from 'react';
-import styles from './mainPage.module.scss';
+import React from 'react';
 
 import Layout from '../layouts/Layout';
-import Header from '../components/HeaderBlock/Header';
+
 import Content from '../components/ContentBlock/Content';
 import StartContent from '../components/ContentBlock/StartContent';
 import EndContent from '../components/ContentBlock/EndContent';

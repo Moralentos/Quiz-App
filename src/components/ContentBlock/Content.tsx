@@ -1,6 +1,6 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
 import styles from './content.module.scss';
-import { Context, ContextType } from '../../pages/MainPage';
+import { Context } from '../../pages/MainPage';
 
 interface propsContent {
   nextPage: () => void;

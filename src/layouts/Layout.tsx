@@ -1,7 +1,7 @@
 import React from 'react';
 import Header from '../components/HeaderBlock/Header';
 import styles from './layout.module.scss';
-import ListPage from '../components/listPageBlock/ListPage';
+import ListPage from '../components/ListPageBlock/ListPage';
 
 import data from '../data';
 
