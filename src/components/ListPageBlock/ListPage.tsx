@@ -21,22 +21,32 @@ const ListPage: React.FC<listPageProps> = ({ elemList, pos }) => {
                   className={index <= pos ? styles.list_right__circle : styles.nonActiveLine}
                 ></div>
               </div>
-              <div
-                className={index <= pos ? styles.list_right__line : styles.nonActiveCircle}
-              ></div>
+              <div className={styles.line_block}>
+                <div
+                  className={index <= pos ? styles.line_block__line : styles.nonActiveCircle}
+                ></div>
+              </div>
             </div>
           );
         }
         if (index > 0 && index < arrayList.length - 1) {
           return (
             <div className={styles.list_full} key={index}>
-              <div className={index <= pos ? styles.list_full__line : styles.nonActiveLine}></div>
+              <div className={styles.line_block}>
+                <div
+                  className={index <= pos ? styles.line_block__line : styles.nonActiveLine}
+                ></div>
+              </div>
               <div className={styles.circle_block}>
                 <div
                   className={index <= pos ? styles.list_full__circle : styles.nonActiveCircle}
                 ></div>
               </div>
-              <div className={index <= pos ? styles.list_full__line : styles.nonActiveLine}></div>
+              <div className={styles.line_block}>
+                <div
+                  className={index <= pos ? styles.line_block__line : styles.nonActiveLine}
+                ></div>
+              </div>
             </div>
           );
         }
@@ -44,9 +54,11 @@ const ListPage: React.FC<listPageProps> = ({ elemList, pos }) => {
         if (index === arrayList.length - 1) {
           return (
             <div className={styles.list_left} key={index}>
-              <div
-                className={index <= pos ? styles.list_left__line : styles.nonActiveLineLeft}
-              ></div>
+              <div className={styles.line_block}>
+                <div
+                  className={index <= pos ? styles.line_block__line : styles.nonActiveLineLeft}
+                ></div>
+              </div>
               <div className={styles.circle_block}>
                 <div
                   className={index <= pos ? styles.list_left__circle : styles.nonActiveCircle}

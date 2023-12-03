@@ -45,8 +45,6 @@ const Content: React.FC<propsContent> = ({
     } else return `${styles.warn} ${styles.warn__active}`;
   };
 
-  console.log(handleWarnClass());
-
   // console.log(`CHECK QUIZLIST =>   ${quizList[pos]}`);
   // console.log(`CHECK POS =>   ${pos}`);
   // console.log(`CHECK BUTTON =>   ${activeButton}`);
@@ -55,9 +53,10 @@ const Content: React.FC<propsContent> = ({
     <>
       <h2>Вопрос {pos + 1}</h2>
       <p>{quizList[pos].question}</p>
+
       <div className={styles.buttons}>
-        <div className={styles.buttons__first}>
-          {quizList[pos].options.map((data, index) => (
+        {quizList[pos].options.map((data, index) => (
+          <div className={`${styles.buttons} ${styles.buttons__block}`}>
             <button
               className={data === answerList[pos][0].myAnswer ? styles.btn__active : styles.btn}
               onClick={() => handleAnswer(pos, data, index)}
@@ -65,12 +64,12 @@ const Content: React.FC<propsContent> = ({
             >
               {data}
             </button>
-          ))}
+          </div>
+        ))}
 
-          {/* <button>{quizList[pos].options[1]}</button>
+        {/* <button>{quizList[pos].options[1]}</button>
           <button>{quizList[pos].options[2]}</button>
           <button>{quizList[pos].options[3]}</button> */}
-        </div>
       </div>
 
       <div className={styles.nav}>
